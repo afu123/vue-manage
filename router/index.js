@@ -15,9 +15,24 @@ const routes = [
                 component:()=>import('../view/Home')
             },
             {
+                path:'/mall',
+                name:'mall',
+                component:()=>import('../view/Mall')
+            },
+            {
                 path:'/user',
                 name:'user',
                 component:()=>import('../view/User')
+            },
+            {
+                path:'/page1',
+                name:'page1',
+                component:()=>import('../view/other/pageOne.vue')
+            },
+            {
+                path:'/page2',
+                name:'page2',
+                component:()=>import('../view/other/pageTwo.vue')
             }
         ]
     },
