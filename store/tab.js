@@ -11,7 +11,8 @@ export default {
             }
         ],
         currentMenu: null,
-        menu: []
+        menu: [],
+        activerouter:'',
     },
     mutations: {
         collapseMenu(state) {
@@ -28,6 +29,10 @@ export default {
             } else {
                 state.currentMenu = null
             }
+        },
+        //设置路由
+        setActiverouter(state, val){
+            state.activerouter = val
         },
         closeTag(state, val) {
             const result = state.tabsList.findIndex(item => item.name === val.name)

@@ -45,6 +45,6 @@ new Vue({
   created(){
     store.commit('addMenu',router)
     
-    console.log(39,Menu);
+    console.log(39,router);
   }
 }).$mount('#app')

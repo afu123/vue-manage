@@ -42,6 +42,8 @@ export default {
            }
            if(index === length){
                this.$router.push({name:this.tags[index-1].name})
+               this.$store.commit('setActiverouter',`/${this.tags[index-1].name}`)
+               console.log(46,this.tags[index-1]);
            }else{
                this.$router.push({name:this.tags[index].name})
            }
