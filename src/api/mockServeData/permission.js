@@ -70,11 +70,11 @@ export default {
               url: 'Home/Home'
             },
             {
-              path: '/video',
-              name: 'video',
+              path: '/mall',
+              name: 'mall',
               label: '商品管理',
               icon: 'video-play',
-              url: 'VideoManage/VideoManage'
+              url: 'Mall/Mall'
             }
           ],
           token: Mock.Random.guid(),

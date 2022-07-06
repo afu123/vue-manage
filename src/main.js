@@ -7,6 +7,7 @@
  */
 import Vue from 'vue'
 import App from './App.vue'
+import Router from 'vue-router'
 import ElementUI, { Menu } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/less/index.less'
@@ -30,7 +31,11 @@ router.beforeEach((to,from,next)=>{
     next()
   }
 })
-
+//解决多次点击路由报错
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 new Vue({
